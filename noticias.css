@@ -1,0 +1,141 @@
+/* Estilos base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #fff;
+    background-color: #000; /* Fondo oscuro */
+}
+
+header {
+    background: #000; /* Fondo negro */
+    padding: 20px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff; /* Color de texto blanco */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.news-section {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centrar el contenido verticalmente */
+}
+
+.news-header {
+    text-align: center;
+    margin-bottom: 20px;
+    width: 100%; /* Ancho completo */
+    display: flex;
+    justify-content: center; /* Centrar horizontalmente */
+}
+
+.news-header-image {
+    max-width: 30%; /* Reduce el tamaño del logo */
+    height: auto;
+}
+
+.news-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Tres columnas */
+    gap: 10px 5px; /* Espacio horizontal y vertical entre las noticias */
+    max-width: 1200px; /* Ancho máximo del contenedor */
+    width: 100%;
+    justify-items: center; /* Centrar las columnas */
+}
+
+.news-item {
+    background: #1e1e1e; /* Fondo oscuro para los cuadros */
+    border: 1px solid #333; /* Borde oscuro */
+    border-radius: 5px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    height: 350px; /* Aumentar la altura para hacer los cuadros más grandes */
+    width: 350px; /* Aumentar el ancho para hacer los cuadros más grandes */
+    margin-bottom: 10px; /* Espacio vertical entre las noticias */
+}
+
+.news-item:hover {
+    transform: scale(1.05); /* Efecto hover */
+}
+
+.news-image {
+    width: 100%;
+    height: 60%; /* Ajuste para la altura de la imagen */
+    object-fit: cover; /* Recorta las imágenes para que se ajusten al cuadro */
+}
+
+.news-content {
+    padding: 10px;
+    height: 40%; /* Ajuste para la altura del contenido */
+}
+
+.news-content h2 {
+    font-size: 16px; /* Tamaño del título ajustado */
+    margin-bottom: 5px;
+}
+
+.news-date {
+    font-size: 12px;
+    color: #777;
+    margin-bottom: 5px;
+}
+
+.news-description {
+    font-size: 12px; /* Tamaño del texto ajustado */
+    margin-bottom: 5px;
+}
+
+.read-more {
+    font-size: 12px;
+    color: #00aaff;
+    text-decoration: none;
+}
+
+.read-more:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 1024px) {
+    .news-container {
+        grid-template-columns: repeat(2, 1fr); /* Dos columnas en pantallas medianas */
+    }
+}
+
+@media (max-width: 768px) {
+    .news-container {
+        grid-template-columns: 1fr; /* Una columna en pantallas pequeñas */
+    }
+}
+
+footer {
+    background: #000; /* Fondo negro */
+    padding: 20px;
+    text-align: center;
+    color: #fff; /* Texto blanco */
+}
